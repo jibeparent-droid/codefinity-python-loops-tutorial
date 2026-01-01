@@ -6,13 +6,12 @@ visa_required = ['China', 'India', 'Saudi Arabia', 'Russia', 'Brazil', 'United A
 
 # List of visa-free travel destinations
 travel_list = []
-counter = 0
 for country in countries:
     if country in visa_required:
         continue
-    if counter <=9:
+    if len(travel_list) <10:
         travel_list.append(country)
-        counter += 1
+        
     else:
         break
     
